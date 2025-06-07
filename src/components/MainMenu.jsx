@@ -85,20 +85,27 @@ function MainMenu() {
           </div>
         </div>
         
-        <div className="flex justify-around items-center py-4 border-t border-b border-gray-200 mb-4">
-          <div className="flex flex-col items-center">
-            <div className="text-blue-700 font-bold text-2xl">UNE</div>
-            <div className="text-xs text-gray-500">União Nacional dos Estudantes</div>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="text-green-700 font-bold text-2xl">ANPG</div>
-            <div className="text-xs text-gray-500">Associação Nacional de Pós-Graduandos</div>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="text-red-700 font-bold text-2xl">UBES</div>
-            <div className="text-xs text-gray-500">União Brasileira dos Estudantes Secundaristas</div>
-          </div>
-        </div>
+          {/* 
+            Seção do menu principal que contém logos e informações de organizações estudantis.
+            As organizações incluem UNE, ANPG e UBEs.
+          */}
+          {/* 
+            <div className="flex justify-around items-center py-4 border-t border-b border-gray-200 mb-4">
+            
+              <div className="flex flex-col items-center">
+                <div className="text-blue-700 font-bold text-2xl">UNE</div>
+                <div className="text-xs text-gray-500">União Nacional dos Estudantes</div>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="text-green-700 font-bold text-2xl">ANPG</div>
+                <div className="text-xs text-gray-500">Associação Nacional de Pós-Graduandos</div>
+              </div>
+              <div className="flex flex-col items-center">
+                <div className="text-red-700 font-bold text-2xl">UBES</div>
+                <div className="text-xs text-gray-500">União Brasileira dos Estudantes Secundaristas</div>
+              </div>
+            </div>
+          */}
         
         <p className="text-center text-sm text-gray-600">
           A Carteirinha Digital Estudantil é um documento oficial que comprova a condição de estudante 
