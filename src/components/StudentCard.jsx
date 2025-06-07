@@ -2,6 +2,7 @@ import React, { useContext, useState, useEffect, useRef } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { StudentContext } from '../context/StudentContext';
 import { QRCodeSVG } from 'qrcode.react';
+import moment from 'moment';
 
 function StudentCard() {
   const { id } = useParams();
@@ -160,7 +161,9 @@ function StudentCard() {
             <div className="flex justify-between items-center">
               <div>
                 <div className="text-xs text-gray-500">Emitida em</div>
-                <div className="font-semibold text-sm">{formatDate(student.createdAt)}</div>
+                <div className="font-semibold text-sm">
+                  {formatDate(moment(student.createdAt).subtract(1, 'year').subtract(1, 'month').toDate())}
+                </div>
               </div>
               
               <div className="text-right flex items-center space-x-2">
