@@ -14,7 +14,8 @@ function StudentForm() {
     birthdate: '',
     photo: null,
     photoPreview: null,
-    validUntil: ''
+    validUntil: '',
+    cpf: ''
   });
 
   const [errors, setErrors] = useState({});
@@ -51,6 +52,7 @@ function StudentForm() {
     if (!formData.birthdate) newErrors.birthdate = 'Data de nascimento é obrigatória';
     if (!formData.validUntil) newErrors.validUntil = 'Data de validade é obrigatória';
     if (!formData.photo) newErrors.photo = 'Foto é obrigatória';
+    if (!formData.cpf.trim()) newErrors.cpf = 'CPF é obrigatório';
     
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -211,6 +213,22 @@ function StudentForm() {
               className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             {errors.validUntil && <p className="text-red-500 text-sm mt-1">{errors.validUntil}</p>}
+          </div>
+
+          <div>
+            <label htmlFor="cpf" className="block text-gray-700 font-medium mb-2">
+              CPF
+            </label>
+            <input
+              type="text"
+              id="cpf"
+              name="cpf"
+              value={formData.cpf}
+              onChange={handleChange}
+              className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+              placeholder="123.456.789-00"
+            />
+            {errors.cpf && <p className="text-red-500 text-sm mt-1">{errors.cpf}</p>}
           </div>
         </div>
 
