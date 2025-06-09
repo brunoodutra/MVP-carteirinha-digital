@@ -55,10 +55,17 @@ function MainMenu() {
 
       {/* Credibility Section */}
       <div className="w-full max-w-4xl bg-white p-8 rounded-lg shadow-lg mb-10">
-        <h2 className="text-2xl font-bold text-center text-gray-800 mb-6">
-          Apoio e Reconhecimento Oficial
-        </h2>
-        
+        <div className="flex justify-center mb-6">
+          <h2 className="text-2xl font-bold text-gray-800 mr-6">
+            Apoio e Reconhecimento Oficial
+          </h2>
+          <div className="flex space-x-1">
+            <img src="/assets/images/logos/une-logo.svg" alt="UNE" className="h-6 w-6" />
+            <img src="/assets/images/logos/anpg-logo.svg" alt="ANPG" className="h-6 w-6" />
+            <img src="/assets/images/logos/ubes-logo.svg" alt="UBES" className="h-6 w-6" />
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
           <div className="border border-gray-200 rounded-lg p-4 flex flex-col items-center">
             <div className="bg-blue-50 p-3 rounded-full mb-3">
@@ -84,22 +91,6 @@ function MainMenu() {
             </p>
           </div>
         </div>
-        
-        <div className="flex justify-around items-center py-4 border-t border-b border-gray-200 mb-4">
-          <div className="flex flex-col items-center">
-            <div className="text-blue-700 font-bold text-2xl">UNE</div>
-            <div className="text-xs text-gray-500">União Nacional dos Estudantes</div>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="text-green-700 font-bold text-2xl">ANPG</div>
-            <div className="text-xs text-gray-500">Associação Nacional de Pós-Graduandos</div>
-          </div>
-          <div className="flex flex-col items-center">
-            <div className="text-red-700 font-bold text-2xl">UBES</div>
-            <div className="text-xs text-gray-500">União Brasileira dos Estudantes Secundaristas</div>
-          </div>
-        </div>
-        
         <p className="text-center text-sm text-gray-600">
           A Carteirinha Digital Estudantil é um documento oficial que comprova a condição de estudante 
           em todo o território nacional, garantindo acesso a benefícios, descontos e meia-entrada em eventos.
